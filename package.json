@@ -1,6 +1,6 @@
 {
   "name": "freecodecamp-projects",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "description": "Project collection created during my freeCodeCamp journey",
   "main": "index.js",
   "scripts": {

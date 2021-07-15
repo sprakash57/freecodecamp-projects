@@ -1,0 +1,55 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+#main {
+    margin: 1rem 0.5rem;
+    background-color: lightgray;
+    border-radius: 0.25rem;
+    padding: 2rem;
+}
+#main > header {
+    text-align: center;
+}
+#main > header > h1 {
+    font-size: 4rem;
+}
+#img-div {
+    background-color: white;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#image {
+    max-width: 100%;
+    height: auto;
+}
+#img-caption {
+    margin-top: 1rem;
+}
+#tribute-info > h3 {
+    padding: 2.8rem;
+    text-align: center;
+}
+#tribute-info ul {
+    max-width: 500px;
+    margin: 0 auto 3.2rem auto;
+    text-align: left;
+    line-height: 1.7;
+}
+#tribute-info li {
+    margin: 1rem 0;
+}
+.statement {
+    max-width: 500px;
+    margin: 0 auto 3rem auto;
+    font-style: italic;
+    font-weight: 200;
+}
+.info {
+    text-align: center;
+}
