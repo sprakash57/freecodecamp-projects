@@ -4,8 +4,9 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    color: white;
+    color: hsl(0, 0%, 100%);
 }
+/* This is how to keep image at the center of the viewport*/
 body::before {
     content: "";
     position: fixed;
@@ -14,6 +15,7 @@ body::before {
     height: 100%;
     width: 100%;
     z-index: -1;
+    /* Color layer on top of image background*/
     background-image: linear-gradient(
         115deg,
         hsla(240, 46%, 42%, 0.8),
@@ -113,6 +115,7 @@ body::before {
 .form-mark input:checked ~ .mark::after {
     display: block;
 }
+/* Customize different marks as per the requirement */
 .check { border-radius: 5px; }
 .check::after {
     left: 7px;
