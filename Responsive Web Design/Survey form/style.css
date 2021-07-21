@@ -1,0 +1,140 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: linear-gradient(
+        115deg,
+        hsla(240, 46%, 42%, 0.8),
+        hsla(240, 42%, 67%, 0.7)
+      ),
+      url('./assets/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.content > header {
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+}
+#description {
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 0.5rem;
+}
+#title {
+    margin-bottom: 0.5rem;
+}
+.form-section {
+    background-color: hsl(250, 100%, 10%);
+    border-radius: 10px;
+    padding: 2rem;
+    opacity: 0.8;
+}
+#survey-form section {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    justify-content: space-between;
+}
+#survey-form section > label {
+    margin-bottom: 0.4rem;
+}
+#submit {
+    padding: 0.5rem;
+    background-color: hsl(9, 100%, 64%);
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+.form-input input, .form-input select, .form-input textarea {
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.form-mark label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.form-mark p {
+    margin: 0 0 0.5rem 0;
+}
+/* Hide the browser's default checkbox */
+.form-mark input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+/* Create a custom checkbox/radio button */
+.mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: hsl(0, 0%, 93%);
+}
+/* When the checkbox is checked, add a custom background */
+.form-mark input:checked ~ .mark {
+    background-color: hsl(9, 100%, 64%);
+}
+/* Create the mark/indicator (hidden when not checked) */
+.mark::after {
+    content: "";
+    position: absolute;
+    display: none;
+} 
+/* Show the mark when checked */
+.form-mark input:checked ~ .mark::after {
+    display: block;
+}
+.check { border-radius: 5px; }
+.check::after {
+    left: 7px;
+    top: 3px;
+    width: 4px;
+    height: 8px;
+    border: solid hsl(0, 0%, 100%);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.radio { border-radius: 50%; }
+.radio::after {
+    top: 5px;
+	left: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: hsl(0, 0%, 100%);
+}
+@media screen and (max-width: 500px) {
+    .container{ min-width: 500px; }
+    .form-section { padding: 0.8rem; }
+}

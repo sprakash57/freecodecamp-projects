@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey</title>
+</head>
+
+<body>
+    <main class="content">
+        <header>
+            <h1 id="title">Interview Survey</h1>
+            <p id="description">Thank you for taking the time to help us improve</p>
+        </header>
+        <section class="form-section">
+            <form id="survey-form">
+                <section class="form-input">
+                    <label for="name" id="name-label">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </section>
+                <section class="form-input">
+                    <label for="email" id="email-label">Email</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </section>
+                <section class="form-input">
+                    <label for="number" id="number-label">Age</label>
+                    <input type="number" id="number" min="18" max="60" placeholder="Enter your age">
+                </section>
+                <section class="form-input">
+                    <label for="dropdown">What role you have applied for</label>
+                    <select name="role" id="dropdown">
+                        <option value="frontend">Front-End Developer</option>
+                        <option value="backend">Back-End Developer</option>
+                        <option value="devops">Devops</option>
+                        <option value="automation">Automation</option>
+                        <option value="scrum">Scrum master</option>
+                    </select>
+                </section>
+                <section class="form-mark">
+                    <p>What would you like us to improve?</p>
+                    <div>
+                        <label for="screening">Screening
+                            <input type="checkbox" id="screening" value="Screening">
+                            <span class="mark check"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="compensation">Compensation
+                            <input type="checkbox" id="compensation" value="Compensation">
+                            <span class="mark check"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="assignment">Assignments
+                            <input type="checkbox" id="assignment" value="Assignments">
+                            <span class="mark check"></span>
+                        </label>
+                    </div>
+                </section>
+                <section class="form-mark">
+                    <p>Would you recommend Interview to your friends?</p>
+                    <div>
+                        <label for="yes">Yes
+                            <input type="radio" id="yes" name="recommend" value="Yes" checked>
+                            <span class="mark radio"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="no">No
+                            <input type="radio" id="no" name="recommend" value="No">
+                            <span class="mark radio"></span>
+                        </label>
+                    </div>
+                </section>
+                <section class="form-input">
+                    <label for="comments">Additonal comments</label>
+                    <textarea id="comments" name="comments" cols="30" rows="10"></textarea>
+                </section>
+                <section>
+                    <button type="submit" id="submit">Submit</button>
+                </section>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
